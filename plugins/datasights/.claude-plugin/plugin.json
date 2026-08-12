@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "datasights",
+  "displayName": "DataSights",
+  "version": "1.0.1",
+  "description": "Guide-only expert for the DataSights BI app: answers how-to questions for every module and turns raw data into a step-by-step dashboard build guide with model SQL and widget settings.",
+  "author": {
+    "name": "DataSights"
+  },
+  "homepage": "https://github.com/andersenfj1/datasights-skills",
+  "repository": "https://github.com/andersenfj1/datasights-skills",
+  "keywords": [
+    "datasights",
+    "bi",
+    "dashboards",
+    "sql",
+    "analytics"
+  ]
+}

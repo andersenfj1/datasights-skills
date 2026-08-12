@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "datasights-skills",
+  "owner": {
+    "name": "DataSights"
+  },
+  "description": "Claude Code plugins for DataSights.",
+  "plugins": [
+    {
+      "name": "datasights",
+      "source": "./plugins/datasights",
+      "displayName": "DataSights",
+      "description": "Guide-only expert for the DataSights BI app: answers how-to questions for every module and turns raw data into a step-by-step dashboard build guide with model SQL and widget settings.",
+      "version": "1.0.1",
+      "author": {
+        "name": "DataSights"
+      },
+      "homepage": "https://github.com/andersenfj1/datasights-skills",
+      "repository": "https://github.com/andersenfj1/datasights-skills",
+      "category": "productivity",
+      "tags": [
+        "datasights",
+        "bi",
+        "dashboards",
+        "sql",
+        "analytics"
+      ]
+    }
+  ]
+}
