@@ -38,14 +38,40 @@ Private repositories work — Claude Code reuses your existing git credentials
 
 **Alternative — from a zip** (no repo access needed, but no auto-updates):
 
-1. Unzip the package so that `SKILL.md` ends up at one of:
-   - `~/.claude/skills/datasights-guide/SKILL.md` — available in all your projects
-   - `<your-project>/.claude/skills/datasights-guide/SKILL.md` — this project only
+1. Unzip the package into one of:
+   - `~/.claude/skills/` — available in all your projects
+   - `<your-project>/.claude/skills/` — this project only
+
+   It expands to several sibling folders (`datasights-guide/` plus one per
+   command). Keep them siblings — the commands reach the reference material by
+   relative path.
 2. Start a new Claude Code session (skills are discovered at session start).
 
-Either way the folder must keep its `references/` subdirectory — that is where
-the detailed module documentation lives. Claude.ai users can upload the same zip
-under Settings → Capabilities → Skills.
+The `datasights-guide/references/` subdirectory must survive the unzip — that is
+where the detailed module documentation lives. Installed this way the commands
+are `/datasights-build`, `/datasights-fix`, and so on, without the `datasights:`
+prefix the plugin adds. Claude.ai users can upload the same zip under
+Settings → Capabilities → Skills.
+
+## Commands
+
+The reference skill loads by itself whenever you ask a DataSights question, so
+you never have to invoke anything. These are direct entry points when you want
+to start a specific job:
+
+| Command | For |
+| --- | --- |
+| `/datasights:build` | raw data → finished dashboard, end to end |
+| `/datasights:fix` | something is empty, wrong, greyed out, or failing |
+| `/datasights:sql` | write or repair a model query |
+| `/datasights:data` | connect a source, import a CSV, convert a PDF/spreadsheet |
+| `/datasights:widget` | build or configure one widget |
+| `/datasights:board` | layout, panels, filters, cross-filtering, exports |
+| `/datasights:schedule` | recurring board delivery by email |
+| `/datasights:trigger` | KPI threshold alerts |
+| `/datasights:admin` | users, access, palettes, Maps keys, writeback enablement |
+
+Each takes free text, e.g. `/datasights:fix my pivot table is empty`.
 
 ## Verify the install
 

@@ -140,6 +140,27 @@ skip anything already answered.
    the user run a quick query and paste the output. You need this to compute
    expected values for verification.
 
+## Command entry points
+
+This skill loads automatically whenever the user asks anything DataSights-shaped, so they
+never have to invoke it. Alongside it ship nine task-shaped commands they can call directly;
+mention the relevant one when it would give them a faster start next time:
+
+| Command | For |
+| --- | --- |
+| `/datasights:build` | raw data → finished dashboard, end to end |
+| `/datasights:fix` | something is empty, wrong, greyed out, or failing |
+| `/datasights:sql` | write or repair a model query |
+| `/datasights:data` | connect a source, import a CSV, convert a PDF/spreadsheet |
+| `/datasights:widget` | build or configure one widget |
+| `/datasights:board` | layout, panels, filters, cross-filtering, exports |
+| `/datasights:schedule` | recurring board delivery by email |
+| `/datasights:trigger` | KPI threshold alerts |
+| `/datasights:admin` | users, access, palettes, Maps keys, writeback enablement |
+
+Outside the plugin — a skills folder checkout — the same commands are `/datasights-build`,
+`/datasights-fix`, and so on, without the `datasights:` prefix.
+
 ## Routing table
 
 Load the matching reference before answering; prefer the reference over memory.
