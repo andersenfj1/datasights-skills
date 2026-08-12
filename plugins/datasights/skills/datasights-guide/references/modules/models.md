@@ -127,7 +127,6 @@ The assistant can also answer how-to questions about the Models module ("How do 
 - **View diff** compares a saved version with the current working copy.
 - **Restore** loads a saved version into the draft.
 - **Save As** opens the model name modal.
-- Writeback eligibility for a model (used by editable Data grids and Form widgets) is resolved from driver metadata for the model's live query, including the insertable columns a Form widget can map to.
 
 ## Permissions And Availability
 

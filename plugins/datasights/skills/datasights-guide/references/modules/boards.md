@@ -110,14 +110,11 @@ Users can then choose filter values, click **Apply filters**, use **Save as defa
 2. Open **Settings**.
 3. Click **Share board**.
 4. Click **Enable sharing** if sharing is disabled.
-5. Set **Board name** (show or hide), **Export** (all / board only / none), and **Form submission** (Off or Allow) for the shared board.
-6. Use **Share URL** or **Iframe Embed Snippet**.
-7. Click **Copy** to copy the share URL.
-8. Use **Refresh link** to rotate the link, or **Disable sharing** to revoke it.
+5. Use **Share URL** or **Iframe Embed Snippet**.
+6. Click **Copy** to copy the share URL.
+7. Use **Refresh link** to rotate the link, or **Disable sharing** to revoke it.
 
 Disabling sharing makes any current iframe or URL stop working.
-
-**Form submission** is **off by default** on shared and embedded boards: viewers cannot submit a Form widget until you set it to **Allow** here. When allowed, submissions are inserted as the share link's owner and still require the source to have writeback enabled.
 
 Embedded boards can receive host-supplied runtime filters from the parent application. If the host sends no filters, the embedded board loads like a normal shared board. When host filters are applied, manual board filter dropdowns load their values inside that external filter context, and embedded exports use the same filtered data the viewer sees. The developer handoff is documented in [External App Embed Filter Handoff](../external-app-embed-filter-handoff.md).
 
@@ -140,7 +137,6 @@ PDF and PowerPoint exports can include selected panels only.
 - Shared iframe embeds can receive host-supplied runtime filters from the parent application.
 - Embedded board filter dropdown values are constrained by host-supplied filters.
 - **Re-render thumbnail** refreshes the board thumbnail used in navigation.
-- Data-backed widgets — including Custom HTML and Free text widgets that use a model — run their query on the board so inserted data fields show live values; they also refresh in exports and thumbnails.
 - **Filters** configures manual board filters.
 - **Apply filters**, **Save as default**, and **Clear filters** control runtime filter selections.
 - **Show filters** and **Hide filters** control the vertical filter drawer when filters are vertical.

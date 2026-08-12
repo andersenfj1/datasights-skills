@@ -28,7 +28,7 @@ Widgets are reusable dashboard elements. A widget can show model data as a chart
 5. Click **Create**.
 6. Open the widget from the list by clicking its name.
 7. Choose a **Model** if the widget type needs data.
-8. Choose a **Widget type** from the row of type icons. The first icon (chart) is selected by default; hover an icon to see the type name. Then configure the query and settings.
+8. Choose a **Widget type** and configure the query and settings.
 9. Click **Run** to preview the output.
 10. Click **Save**.
 
@@ -190,25 +190,12 @@ Use **Custom HTML** when you need a formatted custom display from query results.
 
 ### Free Text
 
-Use **Free text** for notes, headings, explanations, or manually authored content — optionally with live values pulled from data.
+Use **Free text** for notes, headings, explanations, or manually authored content.
 
 - Type directly in the preview widget.
 - Highlight text to use the toolbar for font family, size, color, alignment, and inline styles.
-- To include a value from data, pick a **Model** and build a query, then use the toolbar's **Insert field** menu to drop a data-field chip into the text. On the board (and in exports/thumbnails) each chip is replaced by that column's value from the first row of the widget's query.
-- A model is optional: without one, free text is plain static content; with one, its query runs and refreshes like any other data-backed widget.
 - Unsafe HTML or JavaScript is stripped automatically.
-
-### Form
-
-Use **Form** to let people submit a record that is **inserted as a new row** into the underlying source table, with the look and feel of a form.
-
-- A form is bound to a **Model** whose query resolves to a single writable base table (the same writeback rules as an editable Data grid). If the model can't accept new rows, the settings panel explains why.
-- The source must have **writeback enabled** (an admin setting), and only editors can submit.
-- Build the form field-by-field: **add a field and map it to a specific column** — nothing is included automatically. For each field set a label, an input type, and where its value comes from.
-- **Value source** per field: the user enters it, a constant, a generated UUID, the current user, or the current date/time — so a non-auto primary key can be typed or auto-filled, while auto-increment keys are handled by the database.
-- Map a field for every **required** column, or the insert is rejected.
-- **Display**: show the form inline on the tile, or a button that opens the form in a modal.
-- Every submission is inserted in a transaction and recorded in the write audit log.
+- Free text does not require a model.
 
 ### Summarise
 
