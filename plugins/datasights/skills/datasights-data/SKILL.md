@@ -2,7 +2,6 @@
 name: data
 description: Get data into DataSights — connect a MySQL/PostgreSQL source, import a CSV, or convert a PDF/XLSX/pasted table to clean CSV first. Use this before any model or dashboard work when the data is not in the app yet.
 argument-hint: "[where the data lives now — e.g. 'postgres on RDS', 'sales.xlsx', 'pasted invoice rows']"
-disable-model-invocation: true
 ---
 
 # Get data into DataSights

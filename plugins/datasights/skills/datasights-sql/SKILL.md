@@ -2,7 +2,6 @@
 name: sql
 description: Write or repair the SQL for a DataSights model — use when you need a new model query, or an existing one is rejected ("Only SELECT queries are allowed", duplicate column, wrong types) or returns the wrong rows.
 argument-hint: "[what the model should return, or the failing SQL + error]"
-disable-model-invocation: true
 ---
 
 # Model SQL

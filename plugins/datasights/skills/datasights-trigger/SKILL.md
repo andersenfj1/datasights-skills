@@ -2,7 +2,6 @@
 name: trigger
 description: Set up a DataSights KPI threshold alert — bind a trigger to a KPI widget, pick the condition, value and match mode, choose how often it runs, and configure the notification email. Pick this for alerting ("email me when open tickets go above 50"), not for scheduled board emails.
 argument-hint: "[what should alert you, e.g. 'email ops when daily revenue drops below 10000']"
-disable-model-invocation: true
 ---
 
 # KPI threshold alert
