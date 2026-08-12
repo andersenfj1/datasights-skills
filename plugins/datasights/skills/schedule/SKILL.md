@@ -15,16 +15,16 @@ field on the scheduled board.
 
 ## Read first, in this order
 
-1. `../datasights-guide/SKILL.md` — hard rules (guide-only: you never create the schedule
+1. `../guide/SKILL.md` — hard rules (guide-only: you never create the schedule
    yourself), the *italic label* → **bold value** convention, the roles digest, and verification
    loops. Invoking this command does not load it, so read it now.
-2. `../datasights-guide/references/modules/schedules.md` — the authority for this task: the
+2. `../guide/references/modules/schedules.md` — the authority for this task: the
    two-part model (*Schedules* = reusable days/times; *Scheduled Boards* = the email job), the
    exact field names on the detail page, and the troubleshooting entries.
-3. `../datasights-guide/references/dashboard-design.md` §1 *The grid system* — a scheduled
+3. `../guide/references/dashboard-design.md` §1 *The grid system* — a scheduled
    attachment IS an export, so the 22-row page-break guide applies. Check the board's layout
    before the first send.
-4. `../datasights-guide/references/modules/boards.md` — only if the board doesn't exist yet or
+4. `../guide/references/modules/boards.md` — only if the board doesn't exist yet or
    its panels/filters need changing first.
 
 ## Task frame

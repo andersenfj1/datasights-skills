@@ -14,20 +14,20 @@ If that is empty, ask which **studio** (and room, if room-scoped), what the **ou
 
 ## Read first, in this order
 
-1. `../datasights-guide/SKILL.md` — hard rules (guide-only: you never open `/settings` or change
+1. `../guide/SKILL.md` — hard rules (guide-only: you never open `/settings` or change
    access yourself), the *italic label* → **bold value** convention, the roles digest, and the
    gated-widget table. Invoking this command does not load it, so read it now.
-2. `../datasights-guide/references/modules/settings.md` — the tab index. Use it to decide which
+2. `../guide/references/modules/settings.md` — the tab index. Use it to decide which
    tab owns the request and to check tab visibility rules before giving steps.
 3. The one matching tab file — the authority for the exact labels, dialogs, and messages:
-   `../datasights-guide/references/modules/settings/users.md` (invites, profiles, resend,
-   passwords, delete) · `../datasights-guide/references/modules/settings/studios.md` · `../datasights-guide/references/modules/settings/rooms.md` · `../datasights-guide/references/modules/settings/access.md` (studio + room
-   membership and roles) · `../datasights-guide/references/modules/settings/color-palettes.md` · `../datasights-guide/references/modules/settings/ai-assistant.md` (model, API key,
-   *Assistant Enabled*) · `../datasights-guide/references/modules/settings/maps.md` (API key, *Map ID*, default location).
-4. `../datasights-guide/references/modules/sources.md` §*Allow Data-grid Writeback* — writeback
+   `../guide/references/modules/settings/users.md` (invites, profiles, resend,
+   passwords, delete) · `../guide/references/modules/settings/studios.md` · `../guide/references/modules/settings/rooms.md` · `../guide/references/modules/settings/access.md` (studio + room
+   membership and roles) · `../guide/references/modules/settings/color-palettes.md` · `../guide/references/modules/settings/ai-assistant.md` (model, API key,
+   *Assistant Enabled*) · `../guide/references/modules/settings/maps.md` (API key, *Map ID*, default location).
+4. `../guide/references/modules/sources.md` §*Allow Data-grid Writeback* — writeback
    lives on the source, not in `/settings`, but it is an admin-only toggle. Read it for any
    editable-grid or Form request.
-5. `../datasights-guide/references/gotchas.md` §*Feature is missing from the type list / settings
+5. `../guide/references/gotchas.md` §*Feature is missing from the type list / settings
    (availability gates)* — the layer-by-layer gate table when something is greyed out or absent.
 
 ## Task frame

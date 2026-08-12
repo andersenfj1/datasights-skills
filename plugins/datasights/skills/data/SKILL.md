@@ -14,16 +14,16 @@ and source edits need edit access, writeback needs studio admin.
 
 ## Read before answering
 
-1. `../datasights-guide/SKILL.md` — hard rules (guide-only, *italic label* → **bold value**,
+1. `../guide/SKILL.md` — hard rules (guide-only, *italic label* → **bold value**,
    role checks). Invoking this command does not load it; load it yourself.
-2. `../datasights-guide/references/getting-data-in.md` — the primary reference here: decision
+2. `../guide/references/getting-data-in.md` — the primary reference here: decision
    tree (§1), source fields and *Test Connection* (§2), CSV limits/identifier rules/all-TEXT
    caveat (§3), the in-chat conversion spec (§4), error table (§6).
-3. `../datasights-guide/references/modules/sources.md` — literal UI click-paths for *Add*,
+3. `../guide/references/modules/sources.md` — literal UI click-paths for *Add*,
    *Import CSV*, *Create New Table*, *Append Existing*, *Allow data-grid writeback*.
-4. `../datasights-guide/references/sql-contract.md` — only when you hand over the model SQL that
+4. `../guide/references/sql-contract.md` — only when you hand over the model SQL that
    casts an imported table (§6 for MySQL vs PostgreSQL syntax).
-5. `../datasights-guide/references/gotchas.md` — when the symptom is already happening (numbers
+5. `../guide/references/gotchas.md` — when the symptom is already happening (numbers
    from a CSV-imported table sorting or aggregating wrong).
 
 ## How to run this command

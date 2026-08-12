@@ -14,22 +14,22 @@ PowerPoint export / scheduled email); and which tiles should react to each other
 
 ## Read before answering, in this order
 
-1. `../datasights-guide/SKILL.md` — hard rules (guide-only, verify with the user), the
+1. `../guide/SKILL.md` — hard rules (guide-only, verify with the user), the
    *italic label* → **bold value** convention, and the roles digest. Invoking this command does
    not load it, so read it explicitly.
-2. `../datasights-guide/references/dashboard-design.md` — §1 grid constants and the export page
+2. `../guide/references/dashboard-design.md` — §1 grid constants and the export page
    math, §2 proven layout templates, §3 the model-sharing decision that controls cross-filtering
    (plus the emitter / never-emit lists), §4 board filters, §5 why there is no drill-through.
-3. `../datasights-guide/references/modules/boards.md` — the literal UI flows and labels:
+3. `../guide/references/modules/boards.md` — the literal UI flows and labels:
    *Add Or Rename Panels*, *Add Widgets To A Board*, *Configure Board Filters*, *Share A Board*,
    *Export Or Download A Board*.
 
-Read only if the task touches them: `../datasights-guide/references/gotchas.md` (click filters
+Read only if the task touches them: `../guide/references/gotchas.md` (click filters
 not propagating; deleting a widget affecting other boards),
-`../datasights-guide/references/widget-settings-reference.md` (exact keys when a tile must be
+`../guide/references/widget-settings-reference.md` (exact keys when a tile must be
 reconfigured to emit — pivot click filtering, maps cross filter),
-`../datasights-guide/references/recipe-template.md` (heading grammar if you are delivering a
-full build guide), `../datasights-guide/references/modules/schedules.md` (emailed exports).
+`../guide/references/recipe-template.md` (heading grammar if you are delivering a
+full build guide), `../guide/references/modules/schedules.md` (emailed exports).
 
 ## How to work the task
 

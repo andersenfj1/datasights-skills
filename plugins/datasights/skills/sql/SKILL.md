@@ -15,18 +15,18 @@ or wrong output.
 
 ## Read first, in this order
 
-1. `../datasights-guide/SKILL.md` — hard rules (guide-only: you never run the SQL or touch their
+1. `../guide/SKILL.md` — hard rules (guide-only: you never run the SQL or touch their
    database), the *italic label* → **bold value** convention, and role checks. Invoking this
    command does not load it automatically.
-2. `../datasights-guide/references/sql-contract.md` — the authority for everything below:
+2. `../guide/references/sql-contract.md` — the authority for everything below:
    validator algorithm and banned-word scan (§1), the `AS base` wrapper and aliasing (§2), what
    the widget layer can do so your SQL doesn't over-do it (§3), proven idioms (§5), MySQL vs
    PostgreSQL table (§6), the pre-flight checklist (§7), error → cause → fix (§8).
-3. `../datasights-guide/references/modules/models.md` — the editor flow you hand back: *Source*,
+3. `../guide/references/modules/models.md` — the editor flow you hand back: *Source*,
    *Query*, *Run*, *Data*, *Save*, *Commit message*, *Version history* / *Restore*.
-4. `../datasights-guide/references/getting-data-in.md` §3.4 — only if the table came from a CSV
+4. `../guide/references/getting-data-in.md` §3.4 — only if the table came from a CSV
    import: every column is TEXT, so `CAST` before any math, sort, or date filter.
-5. `../datasights-guide/references/gotchas.md` — only if the query validates and runs but the
+5. `../guide/references/gotchas.md` — only if the query validates and runs but the
    widget shows the wrong thing.
 
 ## How to work

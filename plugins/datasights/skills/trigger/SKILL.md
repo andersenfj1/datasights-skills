@@ -19,20 +19,20 @@ opened at all. Managing triggers also needs an editor/admin-style role.
 
 ## Read before answering, in this order
 
-1. `../datasights-guide/SKILL.md` — hard rules (guide-only, verify with the user), the
+1. `../guide/SKILL.md` — hard rules (guide-only, verify with the user), the
    *italic label* → **bold value** convention, and the roles digest. Invoking this command does
    not load it, so read it explicitly.
-2. `../datasights-guide/references/modules/triggers.md` — the literal flows and labels:
+2. `../guide/references/modules/triggers.md` — the literal flows and labels:
    *Add A Trigger*, *Configure A Trigger*, *Choose A Condition*, *Choose When The Trigger Runs*,
    *Configure Trigger Email*, plus *Permissions And Availability* and *Troubleshooting*.
-3. `../datasights-guide/references/modules/widgets.md` — *Widget Type Reference* → *KPI* for the
+3. `../guide/references/modules/widgets.md` — *Widget Type Reference* → *KPI* for the
    column-count semantics, and *Build A Query*, whenever the KPI widget still has to be built.
 
-Read only if the task touches them: `../datasights-guide/references/gotchas.md` (*KPI shows the
+Read only if the task touches them: `../guide/references/gotchas.md` (*KPI shows the
 wrong thing / caption missing*; *My trigger can't select the widget I want to monitor*),
-`../datasights-guide/references/widget-settings-reference.md` (the `kpi` widgets section, for exact
-setting keys), `../datasights-guide/references/sql-contract.md` (if the model behind the KPI must
-be written or reshaped), `../datasights-guide/references/modules/schedules.md` (if *Run trigger*
+`../guide/references/widget-settings-reference.md` (the `kpi` widgets section, for exact
+setting keys), `../guide/references/sql-contract.md` (if the model behind the KPI must
+be written or reshaped), `../guide/references/modules/schedules.md` (if *Run trigger*
 should reuse a saved schedule).
 
 ## How to work the task

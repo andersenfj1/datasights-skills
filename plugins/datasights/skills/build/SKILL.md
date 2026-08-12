@@ -14,23 +14,23 @@ user's role plus the studio/room it will live in.
 
 Load these in order; do not answer from memory.
 
-1. `../datasights-guide/SKILL.md` — **always first**. Hard rules (guide-only), the app mental
+1. `../guide/SKILL.md` — **always first**. Hard rules (guide-only), the app mental
    model, the intake interview, deliverable rules, roles, gates, and the *italic label* →
    **bold value** convention this whole deliverable is written in.
-2. `../datasights-guide/references/recipe-template.md` — the output format: required section
+2. `../guide/references/recipe-template.md` — the output format: required section
    order, recipe heading grammar, checklist rules. Your guide must match it.
-3. `../datasights-guide/references/getting-data-in.md` — only if the data is not already in a
+3. `../guide/references/getting-data-in.md` — only if the data is not already in a
    MySQL/PostgreSQL database: size caps, CSV import path, in-chat conversion, the all-TEXT caveat.
-4. `../datasights-guide/references/dashboard-design.md` — grid constants, proven layout
+4. `../guide/references/dashboard-design.md` — grid constants, proven layout
    templates, and the shared-model vs model-per-widget decision that controls cross-filtering.
    Read it **before** proposing models, not after.
-5. `../datasights-guide/references/sql-contract.md` — every model query; finish with its
+5. `../guide/references/sql-contract.md` — every model query; finish with its
    pre-flight checklist.
-6. `../datasights-guide/references/modules/widgets.md` and `../datasights-guide/references/modules/boards.md` — the literal
+6. `../guide/references/modules/widgets.md` and `../guide/references/modules/boards.md` — the literal
    UI steps and labels for the editor flow, panels, filters, sharing, and export.
-7. `../datasights-guide/references/widget-settings-reference.md` — verify every settings label
+7. `../guide/references/widget-settings-reference.md` — verify every settings label
    and enum value you write. Never invent one.
-8. `../datasights-guide/references/gotchas.md` — when a pasted result does not match expectation.
+8. `../guide/references/gotchas.md` — when a pasted result does not match expectation.
 
 ## 2. Sequence
 

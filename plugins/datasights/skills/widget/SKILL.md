@@ -14,17 +14,17 @@ in a PDF export, or watched by a trigger.
 
 ## Read before answering, in this order
 
-1. `../datasights-guide/SKILL.md` — hard rules (guide-only, the *italic label* → **bold value**
+1. `../guide/SKILL.md` — hard rules (guide-only, the *italic label* → **bold value**
    convention, the gated-widget table, roles). Invoking this command does not load it.
-2. `../datasights-guide/references/modules/widgets.md` — *Create A Widget*, *Build A Query*, the
+2. `../guide/references/modules/widgets.md` — *Create A Widget*, *Build A Query*, the
    *Widget Type Reference* entry for your type, and *Permissions And Availability*.
-3. `../datasights-guide/references/widget-settings-reference.md` — the *Widget kinds* table, then
+3. `../guide/references/widget-settings-reference.md` — the *Widget kinds* table, then
    that kind's *Chart field roles*, *Settings groups* and *Decision rules*. Keys and enum values not
    listed there do not exist; never invent one.
-4. `../datasights-guide/references/gotchas.md` — the traps for this type (KPI column count, Pie's
+4. `../guide/references/gotchas.md` — the traps for this type (KPI column count, Pie's
    implicit first/second columns, pivot's empty Group By, which types emit click cross-filters).
-5. Only if needed: `../datasights-guide/references/dashboard-design.md` §6 field-mapping
-   cheat-sheet (which column lands in which role), `../datasights-guide/references/sql-contract.md`
+5. Only if needed: `../guide/references/dashboard-design.md` §6 field-mapping
+   cheat-sheet (which column lands in which role), `../guide/references/sql-contract.md`
    (if the model's SQL or aliases must change first).
 
 ## Steps

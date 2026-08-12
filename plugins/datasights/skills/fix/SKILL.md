@@ -21,23 +21,23 @@ If that is empty or vague, ask for these before diagnosing — batch them in one
 
 ## Read before answering
 
-1. `../datasights-guide/SKILL.md` — **always first**. Its hard rules bind you: guide-only (never
+1. `../guide/SKILL.md` — **always first**. Its hard rules bind you: guide-only (never
    call the app API, never connect to their database, never run their SQL), the *italic label* →
    **bold value** convention, the gate table, and the roles digest for who may apply the fix.
-2. `../datasights-guide/references/gotchas.md` — **the primary lookup.** Scan its symptom → cause
+2. `../guide/references/gotchas.md` — **the primary lookup.** Scan its symptom → cause
    → fix entries and its availability-gates table before anything else; most reports land here.
 3. The module doc for the surface, then its `## Troubleshooting` section:
-   `../datasights-guide/references/modules/widgets.md` (widget/grid/summary/settings), `../datasights-guide/references/modules/boards.md`
-   (panels, board filters, sharing, export), `../datasights-guide/references/modules/models.md` (Run, version
-   history), `../datasights-guide/references/modules/sources.md` (connection, CSV import, writeback toggle).
-4. `../datasights-guide/references/sql-contract.md` — only for SQL/model failures. §8 is the
+   `../guide/references/modules/widgets.md` (widget/grid/summary/settings), `../guide/references/modules/boards.md`
+   (panels, board filters, sharing, export), `../guide/references/modules/models.md` (Run, version
+   history), `../guide/references/modules/sources.md` (connection, CSV import, writeback toggle).
+4. `../guide/references/sql-contract.md` — only for SQL/model failures. §8 is the
    error-message → cause → fix table; §1 explains `Only SELECT queries are allowed`; §2 covers
    duplicate columns and wrapper-driven column types.
-5. `../datasights-guide/references/dashboard-design.md` §3–§4 — filter problems: the propagation
+5. `../guide/references/dashboard-design.md` §3–§4 — filter problems: the propagation
    rule, the emitter/non-emitter lists, and what board filters can and cannot do.
-6. `../datasights-guide/references/widget-settings-reference.md` — when a setting is missing or a
+6. `../guide/references/widget-settings-reference.md` — when a setting is missing or a
    value is being rejected; confirm the key exists for that widget kind and the enum is legal.
-7. `../datasights-guide/references/getting-data-in.md` — when numbers or dates from a
+7. `../guide/references/getting-data-in.md` — when numbers or dates from a
    CSV-imported table sort or aggregate wrong.
 
 ## How to answer

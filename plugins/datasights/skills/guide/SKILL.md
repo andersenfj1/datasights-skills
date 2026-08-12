@@ -148,6 +148,7 @@ mention the relevant one when it would give them a faster start next time:
 
 | Command | For |
 | --- | --- |
+| `/datasights` | not sure where to start — shows the menu and routes you |
 | `/datasights:build` | raw data → finished dashboard, end to end |
 | `/datasights:fix` | something is empty, wrong, greyed out, or failing |
 | `/datasights:sql` | write or repair a model query |

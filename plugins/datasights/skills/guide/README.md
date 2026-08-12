@@ -61,6 +61,7 @@ to start a specific job:
 
 | Command | For |
 | --- | --- |
+| `/datasights` | not sure where to start — shows the menu and routes you |
 | `/datasights:build` | raw data → finished dashboard, end to end |
 | `/datasights:fix` | something is empty, wrong, greyed out, or failing |
 | `/datasights:sql` | write or repair a model query |
