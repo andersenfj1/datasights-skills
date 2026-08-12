@@ -1,5 +1,5 @@
 ---
-name: datasights-schedule
+name: schedule
 description: Set up recurring email delivery of a DataSights board — days/times, recipients, PDF or PowerPoint attachment, and the active window. Pick this when a board should land in someone's inbox on a cadence.
 argument-hint: "[board + cadence + recipients, e.g. 'email the Sales board as PDF every Mon 08:00 to the ops team']"
 disable-model-invocation: true

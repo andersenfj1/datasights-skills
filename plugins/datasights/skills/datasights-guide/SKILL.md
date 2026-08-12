@@ -1,5 +1,5 @@
 ---
-name: datasights-guide
+name: guide
 description: >-
   Guide-only expert for the DataSights BI app (studios, rooms, sources, models,
   widgets, boards, panels, schedules, triggers, settings). Use when the user asks

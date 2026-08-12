@@ -1,5 +1,5 @@
 ---
-name: datasights-fix
+name: fix
 description: Diagnose something broken in DataSights — an empty or wrong widget, a chart binding the wrong columns, a read-only data grid, a model that fails to Run, a board filter or cross-filter that does not propagate.
 argument-hint: "[symptom + widget type + any error text]"
 disable-model-invocation: true

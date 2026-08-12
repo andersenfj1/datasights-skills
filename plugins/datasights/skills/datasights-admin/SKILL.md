@@ -1,5 +1,5 @@
 ---
-name: datasights-admin
+name: admin
 description: Administer a DataSights studio — invite users, create studios and rooms, grant roles, manage color palettes, and switch on the gated features (AI assistant/Summarise, Maps keys, source writeback for editable grids and Forms). Pick this for anything under /settings or "who can do what".
 argument-hint: "[the admin task, e.g. 'invite 3 viewers to the Ops room' or 'turn on Maps for the Retail studio']"
 disable-model-invocation: true

@@ -1,5 +1,5 @@
 ---
-name: datasights-widget
+name: widget
 description: Build or configure ONE DataSights widget — choose the right type for the question, wire its query fields, and set its settings. Pick this for single-widget work ("make a combo chart of revenue vs target", "why is my pie wrong"), not for designing a whole board.
 argument-hint: "[what the widget should show, e.g. revenue by month vs target as a combo chart]"
 disable-model-invocation: true

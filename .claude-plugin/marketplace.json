@@ -11,7 +11,7 @@
       "source": "./plugins/datasights",
       "displayName": "DataSights",
       "description": "Guide-only expert for the DataSights BI app: answers how-to questions for every module and turns raw data into a step-by-step dashboard build guide with model SQL and widget settings.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "DataSights"
       },

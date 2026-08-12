@@ -1,5 +1,5 @@
 ---
-name: datasights-board
+name: board
 description: Assemble or improve a DataSights board — panel layout on the grid, board filters, click cross-filtering, sharing and embedding, and export-safe design. Pick this when the widgets already exist (or are planned) and the question is how they fit together on a board.
 argument-hint: "[board name or goal, e.g. 'lay out the ops board for PDF export']"
 disable-model-invocation: true

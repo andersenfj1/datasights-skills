@@ -1,5 +1,5 @@
 ---
-name: datasights-build
+name: build
 description: Take a user from raw data (database, CSV, spreadsheet, PDF, pasted rows) to finished DataSights boards — runs the intake interview, then produces a personalized end-to-end build guide with model SQL, widget recipes, grid coordinates, and a verification checklist.
 argument-hint: "[what you want built + where the data lives]"
 disable-model-invocation: true
