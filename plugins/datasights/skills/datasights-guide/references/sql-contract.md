@@ -183,7 +183,7 @@ A calculated field is a **plain SQL expression** stored per widget
 
 ---
 
-## 5. Proven idioms (all verbatim from a working production demo, all validator-clean)
+## 5. Proven idioms (all validator-clean)
 
 Every query below starts with `SELECT`, contains no semicolon, and no banned word — each one has
 been run against a live MySQL source. Notice the alias discipline: every column has an explicit,

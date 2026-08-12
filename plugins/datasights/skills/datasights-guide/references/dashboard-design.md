@@ -32,7 +32,8 @@ Positions below are written `(x, y, w, h)` — column, row, width in columns, he
 
 ## 2. Proven layout templates
 
-These coordinates are lifted from two production demo boards for a two-store retail POS dashboard. Reuse them as-is.
+These layouts are known-good on the 12-column grid: they tile exactly, leave no dead columns,
+and respect the export page break. Reuse them as-is.
 
 ### Building blocks
 
@@ -122,7 +123,7 @@ elsewhere but clicking it does nothing.
 
 ### Worked example 1 — one model per widget (reporting style, no cross-filter)
 
-Those demo boards use 19 pre-aggregated models, one per widget: e.g. a KPI model
+A reporting board might use one pre-aggregated model per widget: e.g. a KPI model
 `SELECT CONCAT('R ', FORMAT(SUM(amount), 0)) AS \`Sales today\` ...`, a bar model
 `SELECT hour_of_day, store_1_sales, store_2_sales ...`. Every widget's Build Query is
 **pass-through** (auto-filled Selected fields, empty Where/Group By, Run). Clicking a bar in

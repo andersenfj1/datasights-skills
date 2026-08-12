@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "datasights",
   "displayName": "DataSights",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Guide-only expert for the DataSights BI app: answers how-to questions for every module and turns raw data into a step-by-step dashboard build guide with model SQL and widget settings.",
   "author": {
     "name": "DataSights"
