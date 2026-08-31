@@ -1,7 +1,7 @@
 # Sources
 
 Audience: End users
-Last reviewed: 2026-04-22
+Last reviewed: 2026-08-31
 Routes: `/sources`
 
 ## Purpose
@@ -71,6 +71,18 @@ Once enabled, editors can turn on editing for individual data-grid widgets built
 
 Deleting a source can affect models and widgets that depend on it.
 
+### Download The ERD
+
+1. Open **Sources**.
+2. Find the source row.
+3. Click the ERD icon (the branching-tree icon, left of edit).
+4. In **Download ERD For Skill**, leave **Include the first 5 rows of each table** switched off unless you want sample values in the file.
+5. Click **Download**.
+
+The file is named `<source name>.datasights-erd.md` and describes every table in the source: columns, types, nullability, primary and foreign keys, and the relationships between tables. Its header states the SQL dialect, so whoever reads it knows whether to write MySQL, PostgreSQL, or SQL Server syntax. Keep the file in your project folder and the DataSights Claude skill reads it instead of asking you to paste the schema.
+
+Ticking the sample-rows box adds the first 5 rows of every table to the file. That shows the real shape of the data (date formats, codes, units) but writes real values into a file that leaves the app, and it takes noticeably longer on a source with many tables. Tables the connection cannot read are marked in the file rather than failing the download.
+
 ### Import A CSV Into A New Table
 
 1. Open **Sources**.
@@ -105,6 +117,7 @@ When continuing after a column mismatch, matching columns are inserted, missing 
 - **Add** opens the database connection modal.
 - **Import CSV** creates or appends source data from a CSV file.
 - **Test Connection** validates the connection details before saving.
+- The ERD row icon downloads the source schema as a markdown file for the DataSights Claude skill, with an opt-in for 5 sample rows per table.
 - **Type** shows the source database type.
 - **IP** shows the stored source host/IP.
 - **CSV Preview** shows detected columns and sample rows before import.
@@ -115,7 +128,7 @@ When continuing after a column mismatch, matching columns are inserted, missing 
 
 ## Permissions And Availability
 
-- View-only users can see sources but cannot add, edit, delete, or import.
+- View-only users can see sources but cannot add, edit, delete, import, or download the ERD.
 - **Add** and **Import CSV** are disabled until a room/studio context is active.
 - CSV import is available for SQL sources only.
 - Password values are hidden after saving and must be re-entered only when replacing them.
@@ -143,7 +156,11 @@ Use a name that starts with a letter or underscore and contains only letters, nu
 
 The toggle is available to studio administrators only, and only for MySQL and PostgreSQL sources. Ask a studio administrator if you need a source enabled for grid editing.
 
+### ERD Download Fails Or Is Slow
+
+The download reads the live database, so it fails for the same reasons **Test Connection** does — check **Host**, **Port**, **Database**, **Username**, and **Password**. Sample rows run one query per table, so a source with many tables takes much longer; download without sample rows if it times out. Very large sources are capped, and the file's header then reads `truncated: true`.
+
 ## Related Routes And Terms
 
 - Route: `/sources`
-- Related terms: source, database connection, MySQL, PostgreSQL, Microsoft SQL Server, CSV import, test connection, source tables, writeback, data-grid editing
+- Related terms: source, database connection, MySQL, PostgreSQL, Microsoft SQL Server, CSV import, test connection, source tables, writeback, data-grid editing, ERD, schema download, sample rows

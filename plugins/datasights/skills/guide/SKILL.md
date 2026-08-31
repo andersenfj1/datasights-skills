@@ -108,6 +108,11 @@ requires admin on the active studio. `/sources` and `/models` require edit scope
 3. **Anything else (XLSX, PDF, JSON, pasted rows):** no direct import exists.
    Convert it to CSV **in chat**, hand the CSV back to the user, then use flow 2.
 
+Data *egress* worth knowing about: from *Sources*, a row's ERD icon downloads the
+whole schema of a source as `<source name>.datasights-erd.md`. When that file is in
+the project folder, read it instead of interviewing the user about their tables —
+`references/getting-data-in.md` §2.1.
+
 ## Intake interview
 
 Run this for build requests ("I have this data, make me a dashboard"). For pure
@@ -116,9 +121,14 @@ skip anything already answered.
 
 1. **Classify.** How-to question → answer from the routed reference and stop.
    Build request → continue.
-2. **Where does the data live?**
+2. **Where does the data live?** First glob the project folder for
+   `*.datasights-erd.md` — a schema the user downloaded from *Sources*. If one is
+   there, read it (`references/getting-data-in.md` §2.1) and skip every question it
+   already answers: dialect, tables, columns, types, keys, relationships.
    - Live MySQL/PostgreSQL DB → confirm a Source exists or plan *Add a source*
-     (needs host/port/db/user/password and network reachability from the app).
+     (needs host/port/db/user/password and network reachability from the app). If no
+     ERD file is present, mention they can download one: *Sources* → the ERD icon on
+     the source row → **Download**.
    - CSV file(s) → plan the CSV import flow; note the all-TEXT/CAST consequence.
    - XLSX / PDF / JSON / pasted rows → offer to convert to CSV in chat now, then
      treat as CSV.
@@ -185,6 +195,7 @@ Load the matching reference before answering; prefer the reference over memory.
 | Google Maps API key, Map ID, default location | `references/modules/settings/maps.md` |
 | Writing model SQL (full contract, dialects, banned-word workarounds) | `references/sql-contract.md` |
 | Getting data into the app (CSV flow, conversions, CAST patterns) | `references/getting-data-in.md` |
+| Reading a downloaded source ERD/schema file (`*.datasights-erd.md`) | `references/getting-data-in.md` §2.1 |
 | Layout math, filter/cross-filter planning, export-safe design | `references/dashboard-design.md` |
 | Known pitfalls and their fixes | `references/gotchas.md` |
 | Deliverable format for build requests | `references/recipe-template.md` |

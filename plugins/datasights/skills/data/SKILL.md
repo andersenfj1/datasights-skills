@@ -17,8 +17,9 @@ and source edits need edit access, writeback needs studio admin.
 1. `../guide/SKILL.md` — hard rules (guide-only, *italic label* → **bold value**,
    role checks). Invoking this command does not load it; load it yourself.
 2. `../guide/references/getting-data-in.md` — the primary reference here: decision
-   tree (§1), source fields and *Test Connection* (§2), CSV limits/identifier rules/all-TEXT
-   caveat (§3), the in-chat conversion spec (§4), error table (§6).
+   tree (§1), source fields and *Test Connection* (§2), the downloaded ERD schema file (§2.1),
+   CSV limits/identifier rules/all-TEXT caveat (§3), the in-chat conversion spec (§4), error
+   table (§6).
 3. `../guide/references/modules/sources.md` — literal UI click-paths for *Add*,
    *Import CSV*, *Create New Table*, *Append Existing*, *Allow data-grid writeback*.
 4. `../guide/references/sql-contract.md` — only when you hand over the model SQL that
@@ -45,3 +46,9 @@ and source edits need edit access, writeback needs studio admin.
    guessing; note that a failed MySQL create-mode import can leave the table behind.
 7. **Verify before moving on:** have the user *Run* the model and paste rows, and check them
    against values you computed from their sample data.
+8. **Close the loop with an ERD download.** Once the data is in a Source — newly connected or
+   freshly imported — tell the user to grab the schema for later model work: *Sources* → the row's
+   ERD icon → **Download** (leave the 5-sample-rows box off unless they want example values),
+   then keep `<source name>.datasights-erd.md` in the project folder. Every later DataSights
+   command reads it instead of asking them to describe their tables again. If a file is already
+   there, re-download it after a CSV import so the new table appears.

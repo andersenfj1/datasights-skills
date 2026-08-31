@@ -1,7 +1,7 @@
 # Models
 
 Audience: End users
-Last reviewed: 2026-06-12
+Last reviewed: 2026-08-31
 Routes: `/models`, `/models/:modelId`
 
 ## Purpose
@@ -117,7 +117,7 @@ The assistant can also answer how-to questions about the Models module ("How do 
 ## Feature Reference
 
 - **Source** selects the database source used by the model.
-- **View ERD** opens a visual source relationship view for the selected source.
+- **View ERD** opens a visual source relationship view for the selected source. To get the same schema as a file you can keep and share, use the ERD download on the source's row in **Sources**.
 - The source table list shows available tables and column types.
 - **Query** is the SQL editor.
 - **Run** previews results without saving.

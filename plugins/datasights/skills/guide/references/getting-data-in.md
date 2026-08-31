@@ -66,6 +66,46 @@ Microsoft SQL Server exists as a legacy source type (`mssql`, typical port 1433)
 
 **Test Connection** — always run it before saving. `POST /api/sources/test` (alias `/test-connection`) with `{ type, host, port, username, password, database, requireSsl }` plus **either** `studioId` (new source) **or** `sourceId` (editing an existing one) — omitting both returns 400 `"Studio id or source id is required for testing"`. When editing an existing source and leaving password blank, the stored decrypted password is used automatically. Success returns `{ ok: true }` (UI shows **Connection successful.**); any connectivity failure returns 500 `{ "error": "Failed to connect to source" }` — check host/port/credentials and network reachability from the app server.
 
+### 2.1 The downloaded ERD schema file
+
+**Look for this file before you ask the user anything about their schema.** From the *Sources* page the user can download a source's full schema as a markdown file — every table, its columns, types, nullability, keys, and the foreign-key relationships between tables. If that file is in the project folder, it is the authoritative answer to "what tables and columns exist and what dialect is this", and re-asking for a pasted schema is wasted effort.
+
+**How to find it.** The file is named `<source name>.datasights-erd.md`. Glob for `*.datasights-erd.md` in the project (checking any obvious `docs/`, `schema/`, or `data/` subfolder too), or grep for the line `format: datasights.source-erd`. If several are present, each is one source — read the `source.name` header of each and ask which one the task is about only when it is genuinely ambiguous.
+
+**How to tell the user to produce one** (they may not know it exists): *Sources* → the row for the source → the ERD icon (branching tree, left of edit) → **Download** — leaving *Include the first 5 rows of each table* switched off unless sample values are wanted. Then drop the file in the project folder. It needs edit access on the source.
+
+**How to read it.** The file opens with a YAML header:
+
+```yaml
+---
+format: datasights.source-erd
+formatVersion: 1
+generatedAt: 2026-08-31T12:00:00.000Z
+source:
+  id: 8
+  name: "Warehouse"
+  type: "MySQL"
+  dialect: mysql          # mysql | postgres | mssql | unknown
+  database: "warehouse"
+dialectNotes:
+  identifierQuote: "`"
+  limitSyntax: "LIMIT n"
+sampleRows: none          # none | first-5
+counts:
+  tables: 42
+  relationships: 11
+truncated: false
+---
+```
+
+- `source.dialect` settles the dialect question — never ask which database it is when this line is present. It drives everything in [sql-contract.md](sql-contract.md) §6, plus the quoting and row-limit syntax spelled out in `dialectNotes`.
+- Each table is a `## Table: <schema>.<name>` section with a Column / Type / Nullable / Key table. `Key` reads `PK`, or `FK -> other_table.column`, or both. Use these names verbatim, exactly as spelled and cased — this file exists so nothing is guessed.
+- A `## Relationships` section at the end lists every foreign key as `from.column -> to.column (constraint: name)`. Use it to pick join keys instead of inferring them from column names.
+- A table whose non-`id` columns are all TEXT carries a CSV-import note. That is the 3.4 caveat — `CAST` before any math, sort, or date filter on it.
+- `sampleRows: first-5` means each table also has a `### Sample rows (first 5)` block. These show the real formats — date layouts, codes, units, how nulls appear. `NULL` means SQL NULL, `(empty)` means an empty string. A table that could not be read says so instead; that is a permissions or type quirk, not a broken export. Five rows is a formats hint, not enough to verify totals — still ask for 10–30 rows when you need to compute expected values.
+- `truncated: true` means a size cap cut the export short: some tables may be missing. Treat the file as partial and confirm anything that depends on a table you cannot find in it.
+- `sampleRows: none` (the default) is not a problem — the schema is complete either way; only the example values are absent.
+
 ---
 
 ## 3. CSV import in depth

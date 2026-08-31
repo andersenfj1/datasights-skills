@@ -19,6 +19,10 @@ If that is empty or vague, ask for these before diagnosing — batch them in one
 4. **The evidence.** Have them click *Run* in the model or widget editor and **paste the
    output** (columns + first rows, or the failure). Never guess at what the query returns.
 
+For "wrong column" and "no such column" symptoms, check the project folder for a
+`*.datasights-erd.md` file first — it holds the source's real table and column names, so you can
+confirm a name is wrong without asking (`../guide/references/getting-data-in.md` §2.1).
+
 ## Read before answering
 
 1. `../guide/SKILL.md` — **always first**. Its hard rules bind you: guide-only (never

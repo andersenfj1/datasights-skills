@@ -13,6 +13,9 @@ dimensions; (2) the source dialect, **MySQL** or **PostgreSQL**; (3) the table a
 (names + types) or 10–30 sample rows; (4) for a repair, the current SQL and the exact error text
 or wrong output.
 
+Check the project folder for a `*.datasights-erd.md` file first — it answers (2) and (3) outright,
+so ask only for what it does not cover.
+
 ## Read first, in this order
 
 1. `../guide/SKILL.md` — hard rules (guide-only: you never run the SQL or touch their
@@ -24,16 +27,24 @@ or wrong output.
    PostgreSQL table (§6), the pre-flight checklist (§7), error → cause → fix (§8).
 3. `../guide/references/modules/models.md` — the editor flow you hand back: *Source*,
    *Query*, *Run*, *Data*, *Save*, *Commit message*, *Version history* / *Restore*.
-4. `../guide/references/getting-data-in.md` §3.4 — only if the table came from a CSV
-   import: every column is TEXT, so `CAST` before any math, sort, or date filter.
+4. `../guide/references/getting-data-in.md` §2.1 — how to find and read a downloaded
+   `*.datasights-erd.md` schema file; and §3.4, only if the table came from a CSV import: every
+   column is TEXT, so `CAST` before any math, sort, or date filter.
 5. `../guide/references/gotchas.md` — only if the query validates and runs but the
    widget shows the wrong thing.
 
 ## How to work
 
 1. **Confirm the dialect and the shape before writing a line.** Never guess column names or
-   types. If they can't paste the schema, have them open the model and use the table list on the
-   left to read tables and columns, then paste it.
+   types. In this order: (a) look in the project folder for a `*.datasights-erd.md` file (or grep
+   for `format: datasights.source-erd`) — take the dialect from its `source.dialect` header and
+   the table names, column names, types and keys from its `## Table:` sections, and do not re-ask
+   for anything it already states; with several such files, each is one source, so ask which
+   applies only when it is genuinely ambiguous. (b) Otherwise ask them to paste the schema.
+   (c) Otherwise have them open the model and read tables and columns from the table list on the
+   left, then paste it. If they have none of it, tell them about *Sources* → the ERD icon on the
+   source row → **Download** — that produces the file in (a). Reading the file is exactly as
+   allowed as reading any project file; you still never touch their database yourself.
 2. **State the output contract first** — the exact aliases and their types. Aliases become the
    widget field names, so every output column gets a unique explicit alias, always, including
    inside `UNION ALL` branches and on both sides of a join. This is not optional formatting.
