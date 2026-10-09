@@ -48,8 +48,9 @@ Load these in order; do not answer from memory.
 1. Run the intake interview from the main SKILL.md, in compact batches. Do not skip the sample
    data step — you cannot ship verification without it.
 2. **Propose the model list before writing any SQL.** For each: name, purpose, grain, and exact
-   output aliases with types. Say which models are deliberately shared for click cross-filtering
-   and which widgets sit on which panel. Get explicit confirmation, then write SQL.
+   output aliases with types. Default to one shared model per board or panel that the widgets
+   aggregate in their own *Build Query*; name any dedicated model and why it needs one. Say which
+   widgets sit on which panel. Get explicit confirmation, then write SQL.
 3. Write the guide in the recipe-template format. Every widget recipe carries `pos x,y,w,h` on
    the 12-column grid; keep export-bound content inside the page-row budget.
 4. Ship the verification checklist with real expected values computed in chat from the user's

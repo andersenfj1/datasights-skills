@@ -1,7 +1,7 @@
 # Schedules
 
 Audience: End users
-Last reviewed: 2026-04-22
+Last reviewed: 2026-10-08
 Routes: `/schedules`, `/schedules/scheduled-boards/:id`
 
 ## Purpose
@@ -103,6 +103,7 @@ Default schedules cannot be edited.
 - **Include default board filters** applies saved board filters during export.
 - **Attachment format** controls whether emails attach PDF or PowerPoint.
 - **Registered users** and **Other emails** define recipients.
+- Every time a schedule sends a scheduled board, DataSights records the run and whether the email was sent, failed or was held back. A connected AI app can show you this history; the Schedules page does not show it yet.
 
 ## Permissions And Availability
 

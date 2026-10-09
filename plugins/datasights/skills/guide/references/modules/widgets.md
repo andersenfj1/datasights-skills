@@ -1,7 +1,7 @@
 # Widgets
 
 Audience: End users
-Last reviewed: 2026-06-12
+Last reviewed: 2026-10-06
 Routes: `/widgets`, `/widgets/:widgetId`
 
 ## Purpose
@@ -113,6 +113,23 @@ Good to know:
 - You can also ask how-to questions ("How do I add a widget to a board?"); the assistant answers from this documentation.
 - Color requests can use a palette name or a mood such as "muted" or "lighter"; the assistant picks from your studio's palettes.
 - Assistant chats are private to your account. Other users who edit the same widget cannot see your conversation.
+
+### Build Widgets With A Connected AI App
+
+A connected AI app, such as Claude, ChatGPT or Cursor, can create, change and delete widgets for you. See Connected AI Apps for how to connect one.
+
+1. Ask the AI app for the widget you want, for example "a bar chart of orders per day from the Orders by day model".
+2. The app looks up how that widget type is built, runs the widget's query, and checks every field the widget uses against the columns the query returns, using the same rules as the widget editor.
+3. Read the change the app shows you: the widget type, the model, the query, the fields it uses, the first rows of data and any warnings. Nothing has been saved yet.
+4. Tell the app to go ahead. It saves exactly the widget it showed you. Your AI app may also ask for your permission at this point.
+5. Open the widget in **Widgets** to check it. It opens in the widget editor like any other widget.
+
+Good to know:
+
+- The app prefers the built-in widget types. It uses **Custom HTML** only when you ask for it or no built-in type can show the result, and then tells you why.
+- The app prefers one model that several widgets share, with each widget grouping and adding up the model's rows in its own query. Board filters and click filters then work across all of those widgets.
+- **Maps** and **Summarise** widgets cannot be built through an AI app yet. An AI app can still rename or delete them.
+- Deleting a widget through an AI app removes it from every board that shows it. The app lists those boards before it asks you.
 
 ## Build A Query
 
@@ -297,6 +314,7 @@ Use **Sankey diagram** for flows between source and target categories.
 - **Maps** needs map runtime configuration. If map services are unavailable, the map preview may show an error instead of a map.
 - Some chart settings only become available after you run a query because they depend on returned columns or grouped data.
 - **Data grid editing** requires edit access to the widget and a source that an administrator has enabled for writeback. Saving edits, inserting, and deleting follow the per-grid toggles.
+- A connected AI app can only create, change or delete widgets where you can: it needs the editor or admin role in the widget's room or in its studio.
 
 ## Troubleshooting
 
@@ -336,8 +354,12 @@ Check, in order: the source is enabled for writeback by an administrator; **Allo
 
 The row changed or was removed by someone else after it loaded. Reload the board so the grid refetches, then re-apply your change.
 
+### The AI App Says The Widget Is Not Valid
+
+The app lists each problem, such as a field that is not one of the query's columns or a setting value that is not allowed, together with the columns the query returns. Ask the app to preview the widget's query and use those column names.
+
 ## Related Routes And Terms
 
 - `/widgets`: widget list, search, add, rename, duplicate, delete.
 - `/widgets/:widgetId`: widget editor, query builder, settings, preview, save, save as, duplicate, add to board.
-- Related terms: widget, chart, query, model, selected fields, where, group by, sort, limit, board, panel, summary, pivot, map.
+- Related terms: widget, chart, query, model, selected fields, where, group by, sort, limit, board, panel, summary, pivot, map, AI app, connected AI app.

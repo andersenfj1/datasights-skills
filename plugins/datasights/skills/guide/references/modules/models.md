@@ -1,7 +1,7 @@
 # Models
 
 Audience: End users
-Last reviewed: 2026-08-31
+Last reviewed: 2026-10-06
 Routes: `/models`, `/models/:modelId`
 
 ## Purpose
@@ -127,6 +127,7 @@ The assistant can also answer how-to questions about the Models module ("How do 
 - **View diff** compares a saved version with the current working copy.
 - **Restore** loads a saved version into the draft.
 - **Save As** opens the model name modal.
+- A connected AI app can also create, change and delete models for you, but only after it has shown you the change and you have agreed. Its saved SQL changes appear in **Version history** like any other save, with you as the author and the commit message the app gave. See Connected AI Apps.
 
 ## Permissions And Availability
 

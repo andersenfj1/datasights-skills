@@ -161,9 +161,13 @@ can mark it pass or fail without judgment calls.
 - **No invented terminology.** The app has Studios, Rooms, Sources, Models, Widgets, Panels,
   Boards. Do not introduce "datasets", "reports", "tiles" (except "tile" for the physical
   drag-target on a board), or other synonyms.
-- **One model per widget**, unless the user explicitly needs cross-filtering between widgets
-  sharing a model. Each model's SQL does all aggregation, formatting, and casting; widgets stay
-  pass-through.
+- **One shared model per board (or panel)** by default: a row-level or lightly aggregated model
+  with the dimensions the widgets group by, each widget aggregating in its own *Build Query*. Say
+  which widgets share which model and what that buys (board filters and click cross-filters work
+  across them). Use a dedicated model only for a formatted KPI, a top-N list or window functions,
+  and keep that model's widgets pass-through.
+- **Native widget types first.** Custom HTML only when the user asks for it or no native type can
+  produce the result; say why in the widget recipe.
 - **Grid coordinates always given**, on the 12-column grid, for every widget.
 - Model SQL: single `SELECT`, **no CTEs** (the validator requires the statement to start with
   `SELECT`, so `WITH` is rejected outright — see `sql-contract.md`), every column aliased,

@@ -193,6 +193,8 @@ Load the matching reference before answering; prefer the reference over memory.
 | Chart color palettes | `references/modules/settings/color-palettes.md` |
 | AI assistant enablement, model choice, API key | `references/modules/settings/ai-assistant.md` |
 | Google Maps API key, Map ID, default location | `references/modules/settings/maps.md` |
+| Connect an AI app (Claude, ChatGPT, Cursor), what a connected app can do, building models through an AI app | `references/modules/connected-ai-apps.md` |
+| Turn AI apps off for the workspace, disconnect someone's AI app (admins) | `references/modules/settings/ai-apps.md` |
 | Writing model SQL (full contract, dialects, banned-word workarounds) | `references/sql-contract.md` |
 | Getting data into the app (CSV flow, conversions, CAST patterns) | `references/getting-data-in.md` |
 | Reading a downloaded source ERD/schema file (`*.datasights-erd.md`) | `references/getting-data-in.md` §2.1 |
@@ -209,10 +211,12 @@ Load the matching reference before answering; prefer the reference over memory.
    purpose, grain (one row per …), and the exact output aliases with types. Get the
    user's confirmation, then write SQL. Aliases are the field names widgets bind to,
    so they are the contract — choose them once, deliberately.
-3. **One model per widget by default.** Share one model across several widgets only
-   when they must respond to the same click cross-filter (same model, same panel) or
-   the same board filter. Plan panels around this: widgets that should react
-   together belong on the same panel and the same model.
+3. **One shared model per board (or panel) by default.** Build a row-level or lightly
+   aggregated model that carries every dimension the widgets will group by, bind all
+   the widgets to it, and aggregate in each widget's *Build Query* (*Selected fields*
+   with an aggregation, plus *Group By*). Board filters and click cross-filters then
+   apply across every widget on that model. Use a dedicated model only for a formatted
+   KPI, a top-N list, or SQL that needs window functions — and say why.
 4. **Every SQL block must pass the SQL digest below** (and the full contract in
    `references/sql-contract.md`). For CSV-imported tables, `CAST` every numeric and
    date column.
@@ -226,6 +230,11 @@ Load the matching reference before answering; prefer the reference over memory.
 7. **Gated widgets get an enablement step.** If a design uses Summarise, Maps, an
    editable Data grid, or a Form, the recipe's prerequisites section names the gate,
    the *Settings*/*Sources* location, and the studio admin action required.
+8. **Native widget types first.** Use a Bar, Line, Combo, Pie, Funnel, Radar or Sankey
+   chart, a KPI, a Data grid, a Pivot table or Free text whenever one can show the
+   result. Propose Custom HTML only when the user asks for it or no native type can
+   produce the look, and say why: Custom HTML never emits click filters and the editor
+   cannot check its fields.
 
 ## SQL digest (model queries)
 

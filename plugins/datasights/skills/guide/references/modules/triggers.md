@@ -1,7 +1,7 @@
 # Triggers
 
 Audience: End users
-Last reviewed: 2026-04-22
+Last reviewed: 2026-10-08
 Routes: `/triggers`, `/triggers/:id`
 
 ## Purpose
@@ -113,6 +113,8 @@ In link mode, the email sends a standard message with a direct link to the trigg
 - **Active** enables or disables the trigger.
 - **Email delivery** controls whether the email uses a standard widget link or custom text.
 - **Registered users** and **Other emails** define recipients.
+- Every time a trigger is checked, DataSights records the run: the values it read, whether the condition matched, and whether the email was sent. A connected AI app can show you this history; the Triggers page does not show it yet.
+- Each check that matches sends another email. A trigger that checks every 5 minutes and stays matched sends an email every 5 minutes.
 
 ## Permissions And Availability
 

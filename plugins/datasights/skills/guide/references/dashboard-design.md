@@ -116,12 +116,13 @@ elsewhere but clicking it does nothing.
 
 ### Decision rule
 
-> Want click-to-filter interactivity between widgets? Give those widgets the **same model** and
-> put them on the **same panel**, and do the aggregation in each widget's Build Query.
-> Want precise, pre-aggregated SQL per tile (formatted KPIs, window functions, LIMITs)? Use
-> **one model per widget** and accept that clicks will not propagate.
+> **Default: one shared model.** Bind the board's widgets to one row-level or lightly aggregated
+> model and do the aggregation in each widget's Build Query. Clicks then filter every widget on the
+> panel that shares the model, and one board filter row covers them all.
+> **Exception: a dedicated model** for a tile that needs precise, pre-aggregated SQL (a formatted
+> KPI, window functions, a top-N `LIMIT`); its clicks will not propagate to the shared widgets.
 
-### Worked example 1 — one model per widget (reporting style, no cross-filter)
+### Worked example 1 — dedicated models (reporting style, no cross-filter; the exception)
 
 A reporting board might use one pre-aggregated model per widget: e.g. a KPI model
 `SELECT CONCAT('R ', FORMAT(SUM(amount), 0)) AS \`Sales today\` ...`, a bar model
@@ -131,7 +132,7 @@ A reporting board might use one pre-aggregated model per widget: e.g. a KPI mode
 when the SQL does the work (formatting, window functions, `LIMIT 10`) and the board is for
 reading, not exploring.
 
-### Worked example 2 — one shared model (operational drill style, cross-filter on)
+### Worked example 2 — one shared model (the default; cross-filter on)
 
 One row-level model `sales_rows`:
 

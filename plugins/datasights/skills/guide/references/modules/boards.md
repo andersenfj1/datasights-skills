@@ -1,7 +1,7 @@
 # Boards
 
 Audience: End users
-Last reviewed: 2026-05-12
+Last reviewed: 2026-10-06
 Routes: `/boards`, `/boards/:boardId`, `/boards/:boardId/export`, `/embed/boards/:boardId`, `/embed/boards/:boardId/export`
 
 ## Purpose
@@ -91,6 +91,23 @@ Boards must keep at least one panel.
 
 Widgets can also be added from the widget editor using **Add to board**.
 
+### Build Boards With A Connected AI App
+
+A connected AI app can create boards, arrange widgets on their panels, set board filters and delete boards for you. See Connected AI Apps for how to connect one.
+
+1. Ask the AI app for the board you want, for example "a sales board with the four KPIs on top and the two charts below".
+2. Read the change the app shows you: each panel, every widget on it with its position on the 12-column grid, the board filters, and any warnings, such as a widget that a PDF or PowerPoint export would cut across two pages.
+3. Tell the app to go ahead. It builds exactly the board it showed you.
+4. Open the board to check it.
+
+Good to know:
+
+- The widgets must already exist in the board's room. The app creates them first.
+- Board filters work on models that the board's widgets use, so widgets that share one model all follow the same filter.
+- A board is built in several steps. If one step fails, the app tells you which steps were done and which one failed. Ask it to prepare the change again to finish the board.
+- If someone changes the board after the app prepared a change, nothing is saved. Ask the app to prepare the change again.
+- Deleting a board through an AI app works like **Delete**: the widgets stay in the room.
+
 ### Configure Board Filters
 
 1. Open a board.
@@ -148,6 +165,7 @@ PDF and PowerPoint exports can include selected panels only.
 - Export and download actions are available from the board detail page.
 - Sharing and filter configuration require edit access.
 - A panel cannot be deleted when it is the only panel on the board.
+- A connected AI app needs the editor or admin role in the board's room or in its studio to create, change or delete boards.
 
 ## Troubleshooting
 
@@ -167,7 +185,11 @@ Add widgets that use models to the board before creating board filters.
 
 Confirm that the widgets render correctly on the board and that the selected panels contain the expected widgets.
 
+### The AI App Says The Board Changed After The Change Was Prepared
+
+Someone saved a change to the board after the app prepared its change, so nothing was saved. Ask the app to prepare the change again. It then shows the change against the current board.
+
 ## Related Routes And Terms
 
 - Routes: `/boards`, `/boards/:boardId`, `/boards/:boardId/export`, `/embed/boards/:boardId`
-- Related terms: board, dashboard, panel, add widget, board filter, share board, iframe, embedded filters, export PDF, export PowerPoint, download CSV, download Excel
+- Related terms: board, dashboard, panel, add widget, board filter, share board, iframe, embedded filters, export PDF, export PowerPoint, download CSV, download Excel, AI app, connected AI app

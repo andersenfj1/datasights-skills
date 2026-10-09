@@ -1,12 +1,12 @@
 # Settings
 
 Audience: End users
-Last reviewed: 2026-04-22
+Last reviewed: 2026-09-18
 Routes: `/settings`
 
 ## Purpose
 
-Settings is where administrators manage users, studios, rooms, access, custom color palettes, AI Assistant settings, and Maps settings. The Settings page is split into tabs so each area can be documented, exported, and trained separately.
+Settings is where administrators manage users, studios, rooms, access, custom color palettes, AI Assistant settings, Maps settings, and AI apps. The Settings page is split into tabs so each area can be documented, exported, and trained separately.
 
 This overview is the module index. Use the tab-level Markdown files as the source for separate PDFs, slide decks, in-app help, or assistant answers.
 
@@ -19,13 +19,14 @@ This overview is the module index. Use the tab-level Markdown files as the sourc
 - [Color Palettes](settings/color-palettes.md): create and maintain custom widget color palettes.
 - [AI Assistant](settings/ai-assistant.md): choose the assistant model, store the API key, and enable or disable the assistant.
 - [Maps](settings/maps.md): configure Google Maps keys, map IDs, and default map locations.
+- [AI apps](settings/ai-apps.md): allow or stop AI apps (Claude, ChatGPT, Cursor) connecting to the workspace, and disconnect them.
 
 ## Prerequisites
 
 - You must be signed in.
 - The Settings navigation item is available when you are an admin for the active studio.
 - A studio must exist before you can manage rooms, users, access, palettes, assistant settings, or maps settings.
-- **Color Palettes** and **Maps** are shown only when you are an admin for at least one studio.
+- **Color Palettes**, **Maps** and **AI apps** are shown only when you are an admin for at least one studio.
 - Actions inside each tab may be disabled when you do not have admin access to the selected studio.
 
 ## Main User Workflows
@@ -35,7 +36,7 @@ This overview is the module index. Use the tab-level Markdown files as the sourc
 1. Sign in to the application.
 2. Select an active room or studio where you have admin access.
 3. Open **Settings** from the app navigation.
-4. Select a tab: **Users**, **Studios**, **Rooms**, **Access**, **Color Palettes**, **AI Assistant**, or **Maps**.
+4. Select a tab: **Users**, **Studios**, **Rooms**, **Access**, **Color Palettes**, **AI Assistant**, **Maps**, or **AI apps**.
 
 ### Use A Tab-Specific Training Source
 
@@ -53,13 +54,14 @@ This overview is the module index. Use the tab-level Markdown files as the sourc
 - **Color Palettes** manages custom palettes used by widget chart settings.
 - **AI Assistant** manages the studio-level assistant model, API key, and enabled state.
 - **Maps** manages studio-level map runtime settings used by map widgets.
+- **AI apps** turns AI app connections on or off for the whole workspace and lists every connected AI app. It is different from **AI Assistant**, which is the assistant built into the app.
 
 ## Permissions And Availability
 
 - Settings itself requires admin access for the active studio.
 - Studio admins can manage users, studios, rooms, access, palettes, assistant settings, and maps settings for studios they administer.
 - Users without admin access may see disabled actions, **View only**, or messages explaining that only studio admins can manage the selected item.
-- **Color Palettes** and **Maps** do not appear when the signed-in user is not an admin for any studio.
+- **Color Palettes**, **Maps** and **AI apps** do not appear when the signed-in user is not an admin for any studio.
 
 ## Troubleshooting
 
@@ -69,7 +71,7 @@ Select a room or studio where you have admin access. If Settings still does not 
 
 ### A Tab Is Missing
 
-**Color Palettes** and **Maps** are only shown to users who administer at least one studio.
+**Color Palettes**, **Maps** and **AI apps** are only shown to users who administer at least one studio.
 
 ### An Add, Edit, Delete, Or Save Button Is Disabled
 
@@ -78,5 +80,5 @@ Confirm that a studio is selected and that you are an admin for that studio.
 ## Related Routes And Terms
 
 - Route: `/settings`
-- Tabs: **Users**, **Studios**, **Rooms**, **Access**, **Color Palettes**, **AI Assistant**, **Maps**
-- Related terms: settings, user management, studio management, room management, permissions, access, roles, assistant settings, maps settings, palettes
+- Tabs: **Users**, **Studios**, **Rooms**, **Access**, **Color Palettes**, **AI Assistant**, **Maps**, **AI apps**
+- Related terms: settings, user management, studio management, room management, permissions, access, roles, assistant settings, maps settings, palettes, AI apps, connected apps

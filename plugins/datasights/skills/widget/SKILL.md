@@ -32,6 +32,8 @@ in a PDF export, or watched by a trigger.
 1. Restate the question in one line and name the grain of the rows feeding the widget.
 2. Choose the type from that question, not from the user's phrasing — say why, and name the runner-up
    you rejected. If it will sit on a board, check the emitter list before promising click filtering.
+   Prefer a native type; propose Custom HTML only when the user asks for it or no native type can
+   produce the result, and say why. Prefer binding to the board's shared model over a new model.
 3. **Gate check before proposing a gated type.** Summarise, Maps, editable Data grid and Form each
    depend on setup outside the editor — confirm the gate or write the enablement step naming the
    studio admin, per the gate tables in `SKILL.md` and `gotchas.md`.
